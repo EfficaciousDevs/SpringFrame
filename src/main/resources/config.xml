@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    Reference Bean-->
+    <bean class="com.SpringCore.SetterInjection.Scores" id="scores" p:mathsScore="85" p:bioScore="78"
+          p:chemScore="81" p:engScore="87" p:phyScore="86"/>
+
+    <!--  bean using property injection -->
+    <bean class="com.SpringCore.SetterInjection.Student" name="Student1" p:scores-ref="scores" scope="prototype">
+        <property name="studId" value="926"/>
+
+        <property name="studName" value="Akshay Kumar"/>
+
+        <property name="studAddress" value="Patna,Bihar"/>
+<!--        <property name="scores" ref="scores"/>-->
+
+    </bean>
+
+    <!--    self closing bean by using p:Schema -->
+    <bean class="com.SpringCore.SetterInjection.Student" name="Student2" p:studId = "927"
+          p:studName="Pushp Sood" p:studAddress="Jalandhar,Punjab"/>
+</beans>

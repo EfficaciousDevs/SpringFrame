@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.SpringCore.SetterInjection.CompleteInjectionDependencies" id="cidepend"
+          p:personId="922346" p:personName="Akshay Kumar">
+        <property name="personBankAccounts">
+            <list>
+                <value>Standard Chartered Bank</value>
+                <value>Swiss Bank</value>
+                <value>HSBC Bank</value>
+            </list>
+        </property>
+        <property name="accountNumbers">
+            <set>
+                <value>654123698</value>
+                <value>825874693</value>
+                <value>325487965</value>
+            </set>
+        </property>
+
+        <property name="householdProducts">
+            <map>
+                <entry key="Samsung" value="Washing Machine"/>
+                <entry key="LG" value="Television"/>
+                <entry key="OnePlus" value="Oneplus 7T"/>
+            </map>
+        </property>
+
+        <property name="companiesWorked">
+            <props>
+                <prop key="Cognizant">FSE Intern</prop>
+                <prop key="Spade EMS">Data Science Head</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

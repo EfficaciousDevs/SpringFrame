@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="onePlus" class="com.SpringCore.BeanLifeCycle.Oneplus">
+        <property name="modelName" value="Oneplus7T"/>
+        <property name="price" value="35664"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.SpringCore.Referential.B" name="Bref">
+        <property name="y" value="25"/>
+    </bean>
+
+<!--    <bean class="com.SpringCore.Referential.A" name="Aref">-->
+<!--        <property name="x" value="15"/>-->
+<!--        <property name="b" ref="Bref"/>-->
+<!--    </bean>-->
+
+    <bean class="com.SpringCore.Referential.A" name="Aref" p:x="15" p:b-ref="Bref"/>
+</beans>

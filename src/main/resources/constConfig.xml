@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.SpringCore.ConstructorInjection.Certification" name="cer1">
+        <constructor-arg value="Full Stack Java"/>
+    </bean>
+    <bean id="person1" class="com.SpringCore.ConstructorInjection.Person">
+        <constructor-arg value="Manoj Bajpayee"/>
+        <constructor-arg value="922" type="int"/>
+        <constructor-arg value="Patna"/>
+        <constructor-arg ref="cer1"/>
+        <constructor-arg>
+            <list>
+                <value>Machine Learning</value>
+                <value>Business Analytics</value>
+                <value>Web Development</value>
+                <value>Android Development</value>
+            </list>
+        </constructor-arg>
+    </bean>
+<!--    <bean id="person2" class="com.SpringCore.ConstructorInjection.Person"-->
+<!--          c:Name="Pankaj Tripathi" c:Id="921" c:City="Patna" c:cer-ref="cer1"/>-->
+</beans>

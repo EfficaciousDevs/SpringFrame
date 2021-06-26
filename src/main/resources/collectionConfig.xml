@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--    self closing bean by using collection type property -->
+    <bean class="com.SpringCore.collections.Employee"  name="Employee1" >
+        <property name="empName">
+            <list>
+                <value>Shahrukh Khan</value>
+                <value>Salmaan Khan</value>
+                <value>Manoj Bajpayee</value>
+            </list>
+        </property>
+
+        <property name="empAddress">
+            <set>
+                <value>Delhi</value>
+                <value>Mumbai</value>
+                <value>Lucknow</value>
+            </set>
+        </property>
+
+        <property name="jobSalaries">
+            <map>
+              <entry key="PAT" value="401598"/>
+              <entry key="PA" value="451298"/>
+              <entry key="Associate" value="675264"/>
+            </map>
+        </property>
+
+        <property name="prop">
+            <props>
+                <prop key="Gender1">Female</prop>
+                <prop key="Gender2">Male</prop>
+                <prop key="Gender3">Male</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
